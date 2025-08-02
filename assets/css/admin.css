@@ -1,0 +1,423 @@
+/* === Order Details Page Container === */
+.order-details-page {
+    max-width: 1000px;
+    /* Set maximum width for better readability */
+    margin: 0 auto;
+    /* Center horizontally */
+    padding: 30px;
+    /* Inner spacing */
+}
+
+/* === Admin Container (Wrapper for Forms and Content) === */
+.admin-container {
+    max-width: 800px;
+    /* Limit width for a clean layout */
+    margin: 30px auto;
+    /* Center with top/bottom spacing */
+    background: #fffdf8;
+    /* Light cream background */
+    padding: 25px;
+    /* Inner padding */
+    border-radius: 12px;
+    /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+/* Title inside admin container */
+.admin-container h1 {
+    margin-bottom: 20px;
+    /* Space below heading */
+    color: #6F4E37;
+    /* Dark coffee color */
+}
+
+/* Labels inside admin forms */
+.admin-container form label {
+    display: block;
+    /* Make labels take full width */
+    margin-top: 12px;
+    /* Space above label */
+    font-weight: 600;
+    /* Bold text */
+}
+
+/* Form inputs, textareas, selects */
+.admin-container form input,
+.admin-container form textarea,
+.admin-container form select {
+    width: 100%;
+    /* Full width elements */
+    padding: 8px;
+    /* Inner padding */
+    margin-top: 5px;
+    /* Space above field */
+    border: 1px solid #ccc;
+    /* Light border */
+    border-radius: 6px;
+    /* Rounded edges */
+}
+
+/* Primary button spacing */
+.admin-container .btn-primary {
+    margin-top: 15px;
+}
+
+/* === Theme Switcher Container === */
+.theme-container {
+    max-width: 700px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Center content */
+}
+
+/* Buttons for theme selection */
+.theme-buttons {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    gap: 12px;
+    /* Space between buttons */
+    margin: 15px 0 25px 0;
+    /* Vertical spacing */
+}
+
+.theme-buttons a {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    /* Rounded pill shape */
+    background: #A97449;
+    /* Coffee brown */
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    /* Smooth hover effect */
+}
+
+.theme-buttons a:hover {
+    background: #8B5A33;
+    /* Darker brown on hover */
+}
+
+/* === Order Info Grid (Two-column layout) === */
+.order-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two equal columns */
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Info card design */
+.info-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+    margin-bottom: 10px;
+    color: #A97449;
+    font-size: 1.2rem;
+}
+
+/* === Base Styles === */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #F8F4E3;
+    /* Light cream background */
+    color: #4A3C31;
+    /* Dark brown text */
+    margin: 0;
+}
+
+/* === Admin Layout (Sidebar + Content) === */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    /* Full height layout */
+}
+
+/* === Sidebar Styling === */
+.admin-sidebar {
+    width: 240px;
+    background: linear-gradient(135deg, #6F4E37, #A97449);
+    /* Coffee gradient */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.admin-sidebar h2 {
+    color: #F8F4E3;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.admin-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-sidebar li {
+    margin: 10px 0;
+}
+
+.admin-sidebar a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: #F8F4E3;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.admin-sidebar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(4px);
+    /* Slide effect */
+}
+
+/* === Admin Main Content === */
+.admin-content {
+    flex: 1;
+    padding: 30px;
+    max-width: 1100px;
+    /* Prevent content from stretching */
+    margin: 0 auto;
+    /* Center horizontally */
+}
+
+.admin-content h1 {
+    font-size: 1.8rem;
+    color: #6F4E37;
+}
+
+/* === Dashboard Stats Grid === */
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Responsive grid */
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background: #FFFDF8;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(111, 78, 55, 0.1);
+    text-align: center;
+    border: 1px solid #E6D8C3;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    /* Lift effect */
+}
+
+.stat-card h3 {
+    color: #A97449;
+    margin-bottom: 10px;
+}
+
+.stat-number {
+    font-size: 26px;
+    font-weight: bold;
+    color: #6F4E37;
+}
+
+/* === Tables === */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(111, 78, 55, 0.1);
+}
+
+.admin-table th {
+    background: #E6D8C3;
+    padding: 12px;
+    text-align: left;
+    color: #4A3C31;
+}
+
+.admin-table td {
+    padding: 12px;
+    border-bottom: 1px solid #E6D8C3;
+}
+
+.admin-table tr:hover {
+    background: #FAF5EC;
+}
+
+/* === Buttons (General) === */
+a.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+/* Primary button */
+a.btn-primary {
+    background: #A97449;
+    color: white;
+}
+
+a.btn-primary:hover {
+    background: #8B5A33;
+    transform: translateX(-2px);
+}
+
+/* Secondary button */
+a.btn-secondary {
+    background: #D9A066;
+    color: #4A3C31;
+}
+
+a.btn-secondary:hover {
+    background: #C5863A;
+    transform: translateY(-2px);
+}
+
+/* Table action buttons */
+.btn-edit {
+    background: #A97449;
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+}
+
+.btn-edit:hover {
+    background: #8B5A33;
+}
+
+.btn-delete {
+    background: #D9534F;
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+}
+
+.btn-delete:hover {
+    background: #B52B27;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 768px) {
+    .admin-layout {
+        flex-direction: column;
+        /* Stack sidebar on top */
+    }
+
+    .admin-sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        /* Allow horizontal scroll */
+    }
+
+    .admin-sidebar ul {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+/* === Admin Navigation Bar === */
+.admin-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff4e0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #d9a066;
+}
+
+.admin-nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-nav a {
+    text-decoration: none;
+    color: #a97449;
+    font-weight: bold;
+}
+
+.theme-switch {
+    font-size: 14px;
+}
+
+.logout {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+/* Sidebar small buttons */
+.sidebar a.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 10px;
+    /* Smaller padding */
+    font-size: 14px;
+    /* Smaller text */
+    font-weight: 600;
+    border-radius: 8px;
+    /* Less rounded */
+    background: #A97449;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar a.button:hover {
+    background: #8B5A33;
+    transform: translateY(-2px);
+}
+
+/* Action buttons container */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Small button styling */
+.btn-small {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    background: #A97449;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-small:hover {
+    background: #8B5A33;
+}

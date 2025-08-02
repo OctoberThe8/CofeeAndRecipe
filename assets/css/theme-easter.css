@@ -1,0 +1,1042 @@
+
+.theme-title {
+    color: #fdfafd; /* easter light pink */
+}
+
+.theme-switcher a {
+    color: #c72d9e; /* easter strong pink */
+}
+
+.theme-switcher a:hover {
+    color: #f1e7ec; /* white and pink on hover */
+}
+
+
+
+
+/* === Easter Theme Root Variables === */
+:root {
+    --primary-color: #FF9BB3; /* Easter pink */
+    --text-color: #5E4D4A;
+    --background-color: #FFF8F8;
+    --white: #000;
+    --border-radius: 8px;
+    --secondary-color: #B5EAD7; /* Mint green */
+    --accent-color: #E2F0CB; /* Light green */
+}
+
+.login-btn,
+.register-btn {
+    color: #f7f4f5 !important; /* Lighter pink */
+}
+
+/* === Base Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFF8F8; /* Very light pink */
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="3" fill="%23FFD1DC" opacity="0.5"/><circle cx="50" cy="50" r="2" fill="%23B5EAD7" opacity="0.5"/><circle cx="80" cy="30" r="4" fill="%23FF9BB3" opacity="0.3"/><circle cx="30" cy="70" r="3" fill="%23E2F0CB" opacity="0.4"/><circle cx="70" cy="80" r="2" fill="%23FFD1DC" opacity="0.5"/></svg>');
+    background-size: 200px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* HEADER STYLES */
+header {
+    background: linear-gradient(135deg, #FF9BB3, #FFD1DC); /* Easter pink gradient */
+    padding: 0.5rem 0;
+    position: relative;
+    color: #FFF;
+    box-shadow: 0 2px 10px rgba(255, 155, 179, 0.3);
+    border-bottom: 3px dotted #FFF;
+}
+
+/* NAV ICON COLORS */
+.nav-icon,
+.user-actions i,
+.user-btn i,
+.user-menu i {
+    color: #FFF;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.nav-icon:hover,
+.user-actions a:hover i,
+.user-menu a:hover i {
+    color: #E2F0CB; /* Light green */
+    transform: scale(1.1);
+}
+
+/* NAV TEXT UNDER ICONS */
+.centered-nav span {
+    display: block;
+    font-size: 0.85rem;
+    color: #FFF;
+    margin-top: 0.2rem;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+/* CART ICON + NOTIFICATION BADGE */
+.cart-icon {
+    position: relative;
+    font-size: 1.2rem;
+    color: #FFF;
+    margin-right: 1rem;
+}
+
+.cart-icon i {
+    font-size: 1.5rem;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #FF6B8B; /* Brighter pink */
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 1;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.mobile-menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #FFF;
+    cursor: pointer;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.logo img {
+    max-height: 160px;
+    width: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+}
+
+.main-nav {
+    width: 100%;
+}
+
+.centered-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0.1rem;
+    font-size: 0.8rem;
+}
+
+.centered-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #FFF;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.centered-nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-3px);
+}
+
+.nav-icon {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    transition: all 0.3s ease;
+}
+
+/* === User Actions (top right) === */
+.user-actions {
+    position: absolute;
+    top: 1rem;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* === Dropdown Menu Styles === */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #FFD1DC;
+    border: 1px solid #FF9BB3;
+    border-radius: 12px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(255, 155, 179, 0.3);
+    padding: 0.5rem 0;
+    min-width: 200px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-menu li {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu li:hover {
+    background-color: #FF9BB3;
+}
+
+.dropdown-menu li a {
+    color: #5E4D4A;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    color: #FFF;
+}
+
+/* === Mobile Navigation === */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .centered-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .user-actions {
+        position: static;
+        margin-top: 1rem;
+    }
+}
+
+/* === Hero Section === */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #B5EAD7, #E2F0CB);
+    color: #5E4D4A;
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+    box-shadow: 0 4px 12px rgba(181, 234, 215, 0.3);
+    border: 2px dotted #FFF;
+}
+
+/* === Buttons === */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #FF9BB3;
+    color: #FFF;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(255, 155, 179, 0.3);
+}
+
+.btn:hover {
+    background-color: #FF6B8B;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 155, 179, 0.4);
+}
+
+/* === Cards === */
+.card {
+    background: #FFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(255, 155, 179, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #FFD1DC;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(255, 155, 179, 0.2);
+}
+
+/* === Footer Styles === */
+.site-footer {
+    background: linear-gradient(135deg, #FF9BB3, #FFD1DC);
+    color: #FFF;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 -2px 10px rgba(255, 155, 179, 0.3);
+    border-top: 3px dotted #FFF;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3.footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #FFF;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.footer-section h3.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #FFF;
+}
+
+.footer-about {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #FFF;
+    transform: translateX(5px);
+    text-decoration: none;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: #FFF;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: #FFF;
+    color: #FF9BB3;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 20px;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.subscribe-btn {
+    padding: 10px 20px;
+    background-color: #FFF;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #FF9BB3;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #E2F0CB;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-legal {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-legal a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.footer-legal a:hover {
+    color: #FFF;
+}
+
+.footer-legal a:not(:last-child)::after {
+    content: '•';
+    position: absolute;
+    right: -10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.welcome-message {
+    background-color: rgba(181, 234, 215, 0.5);
+    color: #5E4D4A;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid #FF9BB3;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #5E4D4A;
+}
+
+/* === Shopping Cart Styles === */
+.cart-container {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #FFF;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(255, 155, 179, 0.1);
+    border: 1px solid #FFD1DC;
+}
+
+.cart-title {
+    font-size: 1.8rem;
+    color: #FF9BB3;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #FFD1DC;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.cart-table th {
+    background-color: #FFD1DC;
+    color: #5E4D4A;
+    font-weight: bold;
+}
+
+.cart-table td img {
+    width: 60px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #FFD1DC;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-total {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #FF9BB3;
+}
+
+.cart-buttons .btn {
+    margin-left: 1rem;
+}
+
+.empty-cart {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #FF6B8B;
+    padding: 2rem;
+}
+
+.product-card {
+    background-color: #FFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(255, 155, 179, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #FFD1DC;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(255, 155, 179, 0.2);
+}
+
+.product-card img {
+    max-height: 180px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-info h3 {
+    font-size: 1.1rem;
+    color: #5E4D4A;
+    margin: 8px 0;
+}
+
+.product-price {
+    color: #FF9BB3;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.stock-warning {
+    color: #FF6B8B;
+    font-size: 0.85rem;
+}
+
+.btn-add-to-cart {
+    background-color: #FF9BB3;
+    color: #FFF;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(255, 155, 179, 0.3);
+}
+
+.btn-add-to-cart:hover {
+    background-color: #FF6B8B;
+    transform: translateY(-2px);
+}
+
+/* === Recipe Detail Page === */
+.recipe-detail-container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #FFF;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(255, 155, 179, 0.1);
+    border: 1px solid #FFD1DC;
+}
+
+.recipe-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.recipe-header h1 {
+    font-size: 2.2rem;
+    color: #FF9BB3;
+    margin-bottom: 0.5rem;
+}
+
+.recipe-meta {
+    font-size: 0.95rem;
+    color: #B5EAD7;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.recipe-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.recipe-rating .stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+    display: inline-block;
+    font-size: 1.2rem;
+    font-family: Times;
+    line-height: 1;
+    background: linear-gradient(90deg, #FFD700 var(--percent), #ccc var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.recipe-actions {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.recipe-actions .btn {
+    background-color: #B5EAD7;
+    color: #5E4D4A;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    border: none;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recipe-actions .btn:hover {
+    background-color: #E2F0CB;
+}
+
+.recipe-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.recipe-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 155, 179, 0.2);
+    border: 3px solid #FFF;
+}
+
+.recipe-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #5E4D4A;
+    padding: 0 1rem;
+}
+
+.recipe-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+.recipe-details-grid h3 {
+    color: #FF9BB3;
+    margin-bottom: 1rem;
+    border-bottom: 2px dotted #FFD1DC;
+    padding-bottom: 0.5rem;
+}
+
+.ingredients ul,
+.instructions ol {
+    padding-left: 1.5rem;
+    line-height: 1.7;
+    color: #5E4D4A;
+}
+
+.ingredients li,
+.instructions li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.ingredients li:before {
+    content: "🐰";
+    margin-right: 8px;
+}
+
+.instructions li:before {
+    content: "🥚";
+    margin-right: 8px;
+}
+
+.recipe-video {
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+.recipe-video video {
+    width: 100%;
+    max-height: 400px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(255, 155, 179, 0.2);
+    border: 3px solid #FFF;
+}
+
+.recipe-reviews {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #FFD1DC;
+    padding: 0 1rem;
+}
+
+.recipe-reviews h3 {
+    font-size: 1.6rem;
+    color: #FF9BB3;
+    margin-bottom: 1rem;
+}
+
+.review-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border: 1px solid #FFD1DC;
+    border-radius: 10px;
+    resize: vertical;
+    background-color: #FFF8F8;
+}
+
+.review-form .btn-primary {
+    background-color: #FF9BB3;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.review-form .btn-primary:hover {
+    background-color: #FF6B8B;
+}
+
+.stars-input {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.stars-input input[type="radio"] {
+    display: none;
+}
+
+.stars-input label {
+    font-size: 1.4rem;
+    color: #FFD1DC;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.stars-input label:hover,
+.stars-input label:hover ~ label {
+    color: #FFD700;
+    transform: scale(1.2);
+}
+
+.stars-input input[type="radio"]:checked ~ label {
+    color: #FFD700;
+}
+
+.reviews-list {
+    margin-top: 2rem;
+}
+
+.review {
+    border-bottom: 1px solid #FFD1DC;
+    padding: 1rem 0;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #B5EAD7;
+}
+
+.review-content {
+    font-size: 1rem;
+    color: #5E4D4A;
+}
+
+.recipe-image {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.recipe-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(255, 155, 179, 0.2);
+}
+
+.recipe-card {
+    background-color: #FFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(255, 155, 179, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #FFD1DC;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 155, 179, 0.2);
+}
+
+.recipe-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FF9BB3;
+    margin-bottom: 0.5rem;
+}
+
+.recipe-card img {
+    width: 50%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+    border: 2px solid #FFD1DC;
+}
+
+.recipe-meta-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+    color: #B5EAD7;
+}
+
+.recipe-meta-bottom i {
+    margin-right: 5px;
+    color: #FF9BB3;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #FFD1DC;
+}
+
+.cart-table td input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #FFD1DC;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cart-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.user-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #FF9BB3;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 220px;
+    box-shadow: 0 4px 15px rgba(255, 155, 179, 0.3);
+    border: 1px solid #FF6B8B;
+}
+
+.user-menu li {
+    border-bottom: 1px solid #FF6B8B;
+}
+
+.user-menu li:last-child {
+    border-bottom: none;
+}
+
+.user-menu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #FF9BB3;
+    transition: all 0.3s;
+}
+
+.user-menu a:hover {
+    background-color: #FF6B8B;
+    color: #FFF;
+    padding-left: 20px;
+}
+
+.user-menu i {
+    margin-right: 10px;
+    color: #FFF;
+}
+
+/* Easter Egg Hunt Effect */
+body::after {
+    content: "🐣";
+    position: fixed;
+    font-size: 24px;
+    opacity: 0;
+    animation: eggHunt 10s linear infinite;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes eggHunt {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(100vw - 50px), calc(100vh - 50px)) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Add multiple eggs at different positions */
+body::before {
+    content: "🐰";
+    position: fixed;
+    font-size: 24px;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.3;
+    z-index: 9998;
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .recipe-details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .recipe-actions .btn {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    
+    .cart-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .cart-buttons {
+        justify-content: center;
+    }
+}

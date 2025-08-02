@@ -1,0 +1,235 @@
+.theme-title {
+    color: #f7c35f; /* yellow  */
+}
+
+.theme-switcher a {
+    color: #70b642; /* Christmas green */
+}
+
+.theme-switcher a:hover {
+    color: #c62828; /* red on hover */
+}
+/* === Christmas Root Variables === */
+:root {
+    --primary-color: #1a472a; /* Dark green */
+    --secondary-color: #c62828; /* Christmas red */
+    --text-color: #333;
+    --background-color: #fff5f5; /* Light red tint */
+    --white: #fff;
+    --border-radius: 6px;
+    --christmas-gold: #f7c35f;
+    --christmas-red: #c62828;
+    --christmas-green: #1a472a;
+    --christmas-light: #fff5f5;
+}
+
+.login-btn,
+.register-btn {
+    color: var(--christmas-gold) !important;
+}
+
+/* === Base Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--christmas-light);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M30,10 Q50,5 70,10 Q90,15 85,40 Q80,65 50,90 Q20,65 15,40 Q10,15 30,10" fill="none" stroke="%23c62828" stroke-width="0.5" opacity="0.1"/></svg>');
+}
+
+/* HEADER STYLES */
+header {
+    background: linear-gradient(135deg, var(--christmas-green), #0d3018);
+    padding: 0.5rem 0;
+    position: relative;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border-bottom: 3px solid var(--christmas-gold);
+}
+
+/* NAV ICON COLORS */
+.nav-icon,
+.user-actions i,
+.user-btn i,
+.user-menu i {
+    color: var(--christmas-gold);
+}
+
+.nav-icon:hover,
+.user-actions a:hover i,
+.user-menu a:hover i {
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+/* NAV TEXT UNDER ICONS */
+.centered-nav span {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--christmas-gold);
+    margin-top: 0.2rem;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+/* CART ICON + NOTIFICATION BADGE */
+.cart-icon {
+    position: relative;
+    font-size: 1.2rem;
+    color: var(--christmas-gold);
+    margin-right: 1rem;
+}
+
+.cart-icon i {
+    font-size: 1.5rem;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: var(--christmas-red);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 1;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    background-color: var(--christmas-green);
+    border: 1px solid var(--christmas-gold);
+}
+
+.dropdown-menu li a {
+    color: var(--christmas-gold);
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--christmas-red);
+    color: white;
+}
+
+/* Footer Styles */
+.site-footer {
+    background: linear-gradient(135deg, var(--christmas-green), #0d3018);
+    color: var(--christmas-gold);
+    border-top: 3px solid var(--christmas-gold);
+}
+
+.footer-section h3.footer-title {
+    color: var(--christmas-gold);
+}
+
+.footer-section h3.footer-title::after {
+    background: var(--christmas-gold);
+}
+
+.footer-social a:hover {
+    background: var(--christmas-gold);
+    color: var(--christmas-green);
+}
+
+/* Product Cards */
+.product-card {
+    background-color: #fff;
+    border: 1px solid var(--christmas-gold);
+    box-shadow: 0 4px 12px rgba(198, 40, 40, 0.1);
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 20px rgba(198, 40, 40, 0.2);
+}
+
+.product-price {
+    color: var(--christmas-red);
+}
+
+.btn-add-to-cart {
+    background-color: var(--christmas-green);
+}
+
+.btn-add-to-cart:hover {
+    background-color: #0d3018;
+}
+
+/* Recipe Cards */
+.recipe-card {
+    border: 1px solid var(--christmas-gold);
+}
+
+.recipe-meta-bottom i {
+    color: var(--christmas-red);
+}
+
+/* Cart Styles */
+.cart-container {
+    background: #fff9e6;
+    border: 1px solid var(--christmas-gold);
+}
+
+.cart-title {
+    color: var(--christmas-green);
+}
+
+.cart-table th {
+    background-color: var(--christmas-gold);
+}
+
+/* Welcome Message */
+.welcome-message {
+    background-color: rgba(231, 192, 84, 0.5);
+    color: var(--christmas-green);
+    border-left: 4px solid var(--christmas-red);
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--christmas-green);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--christmas-red);
+    transform: translateY(-2px);
+}
+
+/* Add some Christmas decorations */
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="20" height="10" viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 Q5,10 10,0 Q15,10 20,0" fill="%23f7c35f" /></svg>');
+    background-repeat: repeat-x;
+}
+
+
+
+@keyframes snow {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body::before {
+        animation: snow 15s linear infinite;
+    }
+}
